@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
   public static void main(String[] args) {
+
+    List<Integer> avaliacoes = new ArrayList<>();
 
     // Criando um instrutor
     Instrutor instrutor = new Instrutor("João", 40, "joao@email.com", "joao123", "senha123", "Programação",
@@ -17,12 +22,22 @@ public class Main {
     cursoJava.adicionarAluno(aluno2);
 
     // Criando aulas
-    Aula aula1 = new Aula("Introdução ao Java", "Conceitos básicos de Java", "1h30");
-    Aula aula2 = new Aula("Estruturas de Controle", "Loops e Condicional", "2h");
+    Aula aula = new Aula("Introdução ao Java", "Conceitos básicos de Java", "1h30");
+
+    // Assistir a aula
+    aula.assistir();
+
+    // Avaliar a aula
+    aula.avaliar(4);
+    aula.avaliar(5);
+    aula.avaliar(2);
+    aula.avaliar(3);
 
     // Adicionando aulas ao curso
-    cursoJava.adicionarAula(aula1);
-    cursoJava.adicionarAula(aula2);
+    System.out.println("Avaliações:");
+    for (Integer nota : aula.getAvaliacoes()) {
+      System.out.println("- " + nota);
 
+    }
   }
 }
