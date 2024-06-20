@@ -1,10 +1,11 @@
 public class Instrutor extends Usuario {
 
   @SuppressWarnings("unused")
-  private String especialidade;
+  private String especialidade; // Atributo
   @SuppressWarnings("unused")
-  private String bio;
+  private String bio; // Atributo 
 
+// Construtor
   public Instrutor(String name, int age, String email, String username, String senha, String especialidade,
       String bio) {
     super(name, age, email, username, senha);
@@ -20,7 +21,7 @@ public class Instrutor extends Usuario {
     // Atribuir nota
   }
 
-  // Polimorfismo
+  // Polimorfismo: sobrescrever o método atualizarInfo da classe Usuario
   @Override
   public void atualizarInfo() {
     // Atualizar informações do instrutor
