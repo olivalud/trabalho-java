@@ -3,6 +3,7 @@ public class Usuario extends Pessoa {
   protected String username;
   protected String senha;
 
+// Construtor
   public Usuario(String name, int age, String email, String username, String senha) {
     super(name, age, email);
     this.username = username;
@@ -25,6 +26,5 @@ public class Usuario extends Pessoa {
 }
 
 // Atributos - username e senha
-// Construtor - inicializa atributos herdados ( name, age, email ) e os novos,
-// username e senha
+// Construtor - inicializa atributos herdados ( name, age, email ) e os novos, username e senha
 // Métodos - verificarLogin(), fazerLogout(), atualizarInfo
